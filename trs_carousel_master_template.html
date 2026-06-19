@@ -153,7 +153,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .so-tag{font-size:26px;letter-spacing:10px;color:rgba(170,255,0,0.42);text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
 .so-handle{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(170,255,0,0.32);letter-spacing:5px;margin-top:10px}
 /* FIX: white, 44px, margin-top 28px — sits below handle, clear of watermark */
-.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;margin-top:64px;letter-spacing:0.5px;width:860px;text-align:left;line-height:1.45;font-family:'Inter',sans-serif}
+.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;margin-top:64px;letter-spacing:0.5px;width:860px;text-align:center;line-height:1.45;font-family:'Inter',sans-serif}
 </style>
 </head>
 <body>
@@ -191,7 +191,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="bug">SPORT. DECODED.</div>
 <div class="pill">{{TEAM_FLAG}} {{TEAM_CODE}}</div>
 <!-- FIX: padding-top 12% pushes content down so title sits in red, body in dark -->
-<div class="inner" style="justify-content:center;padding-top:12%;padding-bottom:0">
+<div class="inner" style="justify-content:flex-end;padding-top:0;padding-bottom:44px">
   <div>
     <div class="sec">{{PROBLEM_LABEL}}</div>
     <div class="ttl" style="font-size:100px;margin-bottom:20px">{{PROBLEM_TITLE_L1}}<br>{{PROBLEM_TITLE_L2}}<br>{{PROBLEM_TITLE_L3}}</div>
@@ -235,11 +235,11 @@ body{margin:0;padding:0;background:#0a0a0a}
   <div class="mr"><div class="mt">{{MATCH2_HOME}}</div><div class="ms">{{MATCH2_SCORE_H}}</div><div class="msep">—</div><div class="ms w">{{MATCH2_SCORE_A}}</div><div class="mt r">{{MATCH2_AWAY}}</div><div class="mres {{MATCH2_COLOR}}">{{MATCH2_RESULT}}</div></div>
   <div class="mr last"><div class="mt">{{MATCH3_HOME}}</div><div class="ms w">{{MATCH3_SCORE_H}}</div><div class="msep">—</div><div class="ms">{{MATCH3_SCORE_A}}</div><div class="mt r">{{MATCH3_AWAY}}</div><div class="mres {{MATCH3_COLOR}}">{{MATCH3_RESULT}}</div></div>
   <!-- FIX: clean form strip — dots sized correctly, text readable -->
-  <div class="fstrip" style="margin-top:24px;padding-top:20px">
-    <div class="fd {{FORM_DOT1}}" style="flex-shrink:0">{{FORM_L1}}</div>
-    <div class="fd {{FORM_DOT2}}" style="flex-shrink:0">{{FORM_L2}}</div>
-    <div class="fd {{FORM_DOT3}}" style="flex-shrink:0">{{FORM_L3}}</div>
-    <div class="fn" style="font-size:26px;margin-left:16px;color:#ffffff">{{FORM_NOTE}}</div>
+  <div class="fstrip" style="margin-top:24px;padding-top:20px;border-top:1px solid #1e1e1e">
+    <div class="fd {{FORM_DOT1}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L1}}</div>
+    <div class="fd {{FORM_DOT2}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L2}}</div>
+    <div class="fd {{FORM_DOT3}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L3}}</div>
+    <div style="margin-left:16px;font-size:26px;color:#ffffff;font-weight:300;font-family:'Inter',sans-serif;line-height:1.4;flex:1">{{FORM_NOTE}}</div>
   </div>
 </div>
 <div class="sc">04 / 10</div>
