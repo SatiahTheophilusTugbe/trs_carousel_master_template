@@ -109,7 +109,7 @@ font-family:'Inter',sans-serif;
 .sc.dim{color:rgba(170,255,0,0.1)}
 
 /* ── SHARED LAYOUT ── */
-.inner{position:relative;z-index:5;flex:1;display:flex;flex-direction:column;padding:44px 56px;justify-content:center;overflow:hidden}
+.inner{position:relative;z-index:5;flex:1;display:flex;flex-direction:column;padding:44px 56px;justify-content:flex-start;overflow:hidden}
 .inner.top{justify-content:flex-start;padding-top:116px}
 .sec{font-size:24px;letter-spacing:8px;color:#AAFF00;text-transform:uppercase;margin-bottom:24px;font-weight:600;font-family:'Inter',sans-serif}
 .ttl{font-family:'Bebas Neue',sans-serif;font-size:112px;line-height:0.93;color:#fff;letter-spacing:1px;margin-bottom:32px}
@@ -251,7 +251,7 @@ FIX: diagonal team color split using TEAM_COLOR + TEAM_COLOR_MID
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:560px;line-height:1;color:#fff;opacity:0.05;right:0;bottom:0;letter-spacing:-20px;pointer-events:none;padding:0 20px 20px 0">{{HERO_STAT}}</div>
 <div class="bug">SPORT. DECODED.</div>
 <div class="pill">{{TEAM_FLAG}} {{TEAM_CODE}}</div>
-<div class="inner" style="justify-content:center;padding-top:48px;padding-bottom:48px">
+<div class="inner" style="justify-content:flex-start;padding-top:180px;padding-bottom:48px">
 <div style="font-size:26px;letter-spacing:8px;color:#fff;text-transform:uppercase;margin-bottom:28px;font-weight:400;font-family:'Inter',sans-serif">{{EYEBROW}}</div>
 <div style="font-family:'Bebas Neue',sans-serif;font-size:296px;line-height:0.82;color:#AAFF00;letter-spacing:-8px">{{HERO_STAT}}<span style="font-family:'Bebas Neue',sans-serif;font-size:104px;color:#fff;letter-spacing:2px;display:block;margin-top:20px;line-height:1">{{HERO_UNIT}}</span></div>
 <div class="vbar"></div>
@@ -270,16 +270,16 @@ SLIDE 2 — CONTEXT / SPLIT ZONE
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:440px;color:#AAFF00;opacity:0.04;right:0;bottom:0;letter-spacing:-16px;pointer-events:none;padding:0 16px 16px 0;line-height:1">{{TEAM_CODE}}</div>
 <div class="bug">SPORT. DECODED.</div>
 <div class="pill">{{TEAM_FLAG}} {{TEAM_CODE}}</div>
-<div class="inner" style="justify-content:center;padding-top:16%;padding-bottom:0">
+<div class="inner" style="justify-content:flex-start;padding-top:120px;padding-bottom:48px">
 <div>
 <div class="sec">{{PROBLEM_LABEL}}</div>
-<div class="ttl">{{PROBLEM_TITLE_L1}}<br>{{PROBLEM_TITLE_L2}}<br>{{PROBLEM_TITLE_L3}}</div>
-<div class="bod" style="margin-top:20px">{{PROBLEM_BODY}}</div>
+<div class="ttl" style="font-size:88px;margin-bottom:20px">{{PROBLEM_TITLE_L1}}<br>{{PROBLEM_TITLE_L2}}<br>{{PROBLEM_TITLE_L3}}</div>
+<div class="bod" style="font-size:36px;margin-top:16px">{{PROBLEM_BODY}}</div>
 </div>
 <div class="trio">
-<div class="tb"><div class="tn">{{STAT1_NUM}}</div><div class="tl">{{STAT1_LABEL}}</div></div>
-<div class="tb"><div class="tn">{{STAT2_NUM}}</div><div class="tl">{{STAT2_LABEL}}</div></div>
-<div class="tb"><div class="tn">{{STAT3_NUM}}</div><div class="tl">{{STAT3_LABEL}}</div></div>
+<div class="tb"><div class="tn" style="font-size:80px">{{STAT1_NUM}}</div><div class="tl">{{STAT1_LABEL}}</div></div>
+<div class="tb"><div class="tn" style="font-size:80px">{{STAT2_NUM}}</div><div class="tl">{{STAT2_LABEL}}</div></div>
+<div class="tb"><div class="tn" style="font-size:80px">{{STAT3_NUM}}</div><div class="tl">{{STAT3_LABEL}}</div></div>
 </div>
 </div>
 <div class="sc">02 / 10</div>
@@ -311,7 +311,7 @@ SLIDE 4 — RESULTS
 <div style="position:absolute;right:0;top:0;bottom:0;width:48%;background:{{TEAM_COLOR}};opacity:0.28;z-index:1"></div>
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:400px;color:#AAFF00;opacity:0.04;right:0;bottom:0;letter-spacing:-16px;pointer-events:none;padding:0 16px 16px 0;line-height:1;z-index:2">{{FORM_GHOST}}</div>
 <div class="bug" style="z-index:20">SPORT. DECODED.</div>
-<div class="inner" style="justify-content:center;z-index:5">
+<div class="inner" style="justify-content:flex-start;padding-top:116px;z-index:5">
 <div class="sec">{{RESULT_SECTION}}</div>
 <div class="ttl" style="font-size:96px;margin-bottom:20px">{{RESULT_TITLE}}</div>
 <div class="mr"><div class="mt">{{MATCH1_HOME}}</div><div class="ms">{{MATCH1_SCORE_H}}</div><div class="msep">—</div><div class="ms w">{{MATCH1_SCORE_A}}</div><div class="mt r">{{MATCH1_AWAY}}</div><div class="mres {{MATCH1_COLOR}}">{{MATCH1_RESULT}}</div></div>
@@ -335,7 +335,7 @@ FIX: right-side team color gradient fills dead space
 <div style="position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to left,{{TEAM_COLOR}} 0%,transparent 100%);opacity:0.18;z-index:1"></div>
 <div style="position:absolute;font-family:'Georgia',serif;font-size:760px;color:#AAFF00;opacity:0.04;right:-20px;bottom:-120px;pointer-events:none;line-height:1;z-index:2">&ldquo;</div>
 <div class="bug">SPORT. DECODED.</div>
-<div class="inner" style="justify-content:center">
+<div class="inner" style="justify-content:flex-start;padding-top:116px">
 <div class="sec">TRS Analysis</div>
 <div style="width:96px;height:8px;background:#AAFF00;margin-bottom:36px"></div>
 <div class="qt">{{QUOTE_BODY}}</div>
