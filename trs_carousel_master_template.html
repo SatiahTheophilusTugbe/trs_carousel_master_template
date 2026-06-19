@@ -153,7 +153,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .so-tag{font-size:26px;letter-spacing:10px;color:rgba(170,255,0,0.42);text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
 .so-handle{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(170,255,0,0.32);letter-spacing:5px;margin-top:10px}
 /* FIX: white, 44px, margin-top 28px — sits below handle, clear of watermark */
-.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;margin-top:64px;letter-spacing:0.5px;width:860px;text-align:center;line-height:1.45;font-family:'Inter',sans-serif}
+.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;padding-top:56px;letter-spacing:0.5px;width:860px;text-align:center;line-height:1.45;font-family:'Inter',sans-serif}
 </style>
 </head>
 <body>
@@ -235,11 +235,11 @@ body{margin:0;padding:0;background:#0a0a0a}
   <div class="mr"><div class="mt">{{MATCH2_HOME}}</div><div class="ms">{{MATCH2_SCORE_H}}</div><div class="msep">—</div><div class="ms w">{{MATCH2_SCORE_A}}</div><div class="mt r">{{MATCH2_AWAY}}</div><div class="mres {{MATCH2_COLOR}}">{{MATCH2_RESULT}}</div></div>
   <div class="mr last"><div class="mt">{{MATCH3_HOME}}</div><div class="ms w">{{MATCH3_SCORE_H}}</div><div class="msep">—</div><div class="ms">{{MATCH3_SCORE_A}}</div><div class="mt r">{{MATCH3_AWAY}}</div><div class="mres {{MATCH3_COLOR}}">{{MATCH3_RESULT}}</div></div>
   <!-- FIX: clean form strip — dots sized correctly, text readable -->
-  <div class="fstrip" style="margin-top:24px;padding-top:20px;border-top:1px solid #1e1e1e">
-    <div class="fd {{FORM_DOT1}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L1}}</div>
-    <div class="fd {{FORM_DOT2}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L2}}</div>
-    <div class="fd {{FORM_DOT3}}" style="flex-shrink:0;color:#0a0a0a">{{FORM_L3}}</div>
-    <div style="margin-left:16px;font-size:26px;color:#ffffff;font-weight:300;font-family:'Inter',sans-serif;line-height:1.4;flex:1">{{FORM_NOTE}}</div>
+  <div style="display:flex;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid #1e1e1e;align-items:center">
+    <div style="width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;background:{{FORM_BG1}};color:#0a0a0a">{{FORM_L1}}</div>
+    <div style="width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;background:{{FORM_BG2}};color:#0a0a0a">{{FORM_L2}}</div>
+    <div style="width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;background:{{FORM_BG3}};color:#0a0a0a">{{FORM_L3}}</div>
+    <div style="margin-left:12px;font-size:26px;color:#ffffff;font-weight:300;font-family:'Inter',sans-serif;line-height:1.4;flex:1">{{FORM_NOTE}}</div>
   </div>
 </div>
 <div class="sc">04 / 10</div>
