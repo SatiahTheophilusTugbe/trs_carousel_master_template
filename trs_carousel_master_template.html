@@ -82,7 +82,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .fw{background:#AAFF00;color:#0a0a0a}
 .fl{background:#8B1414;color:#fff}
 .fd2{background:#333;color:#fff}
-.fn{margin-left:12px;font-size:28px;color:#fff;font-weight:300;line-height:1.4;font-family:'Inter',sans-serif;flex:1}
+.fn{margin-left:12px;font-size:28px;color:#ffffff !important;font-weight:300;line-height:1.4;font-family:'Inter',sans-serif;flex:1}
 
 /* QUOTE */
 .qt{font-size:42px;color:#fff;line-height:1.55;font-weight:300;font-style:italic;font-family:'Inter',sans-serif}
@@ -144,16 +144,16 @@ body{margin:0;padding:0;background:#0a0a0a}
 
 /* SIGN-OFF — so-line below watermark, not on it */
 .so-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.so-ghost{position:absolute;font-family:'Bebas Neue',sans-serif;font-size:820px;color:#AAFF00;opacity:0.05;pointer-events:none;letter-spacing:-40px;line-height:0.85;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;user-select:none;z-index:1}
-.so-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
-.so-third{font-family:'Bebas Neue',sans-serif;font-size:156px;color:#AAFF00;letter-spacing:18px;line-height:1}
-.so-rail{font-family:'Bebas Neue',sans-serif;font-size:156px;color:#AAFF00;letter-spacing:18px;line-height:1;margin-top:-20px}
+.so-ghost{position:absolute;font-family:'Bebas Neue',sans-serif;font-size:820px;color:#AAFF00;opacity:0.05;pointer-events:none;letter-spacing:-40px;line-height:0.85;top:44%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;user-select:none;z-index:1}
+.so-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%}
+.so-third{font-family:'Bebas Neue',sans-serif;font-size:156px;color:#AAFF00;letter-spacing:18px;line-height:1;text-align:center;width:100%}
+.so-rail{font-family:'Bebas Neue',sans-serif;font-size:156px;color:#AAFF00;letter-spacing:18px;line-height:1;margin-top:-20px;text-align:center;width:100%}
 .so-sports{font-size:26px;letter-spacing:18px;color:rgba(170,255,0,0.28);text-transform:uppercase;margin-top:14px;font-weight:500;font-family:'Inter',sans-serif}
 .so-rule{width:96px;height:3px;background:rgba(170,255,0,0.18);margin:24px auto}
 .so-tag{font-size:26px;letter-spacing:10px;color:rgba(170,255,0,0.42);text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
 .so-handle{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(170,255,0,0.32);letter-spacing:5px;margin-top:10px}
 /* FIX: white, 44px, margin-top 28px — sits below handle, clear of watermark */
-.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;margin-top:48px;letter-spacing:0.5px;max-width:860px;text-align:center;line-height:1.45;font-family:'Inter',sans-serif}
+.so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;margin-top:64px;letter-spacing:0.5px;width:860px;text-align:left;line-height:1.45;font-family:'Inter',sans-serif}
 </style>
 </head>
 <body>
@@ -239,7 +239,7 @@ body{margin:0;padding:0;background:#0a0a0a}
     <div class="fd {{FORM_DOT1}}" style="flex-shrink:0">{{FORM_L1}}</div>
     <div class="fd {{FORM_DOT2}}" style="flex-shrink:0">{{FORM_L2}}</div>
     <div class="fd {{FORM_DOT3}}" style="flex-shrink:0">{{FORM_L3}}</div>
-    <div class="fn" style="font-size:26px;margin-left:16px">{{FORM_NOTE}}</div>
+    <div class="fn" style="font-size:26px;margin-left:16px;color:#ffffff">{{FORM_NOTE}}</div>
   </div>
 </div>
 <div class="sc">04 / 10</div>
