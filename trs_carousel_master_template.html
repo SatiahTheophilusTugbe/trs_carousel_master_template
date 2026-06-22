@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-TRS CAROUSEL MASTER TEMPLATE v3
+TRS CAROUSEL MASTER TEMPLATE v4
 Fixes applied:
-- All hardcoded #7A0D11 / #8B0F14 replaced with {{TEAM_COLOR}} / {{TEAM_COLOR_MID}}
-- Slide 2: content centered across 50/50 split, text sits correctly in each half
-- Slide 4: form strip text readable, dots clean
-- Slide 7: single dominant hero, one sub-headline, stepped points
-- Slide 10: so-line sits below watermark, not on top
-- All slides: vertical centering aligned to slide 9 reference
-- Double border lines removed
-- Platform caption fields added to JSON schema
+- Slide 2: FIXED — title permanently anchored in top color zone via absolute positioning
+           body and stats locked in bottom dark zone via absolute positioning
+           No more drift regardless of text length
+- All other slides: unchanged from v3
 -->
 <head>
 <meta charset="UTF-8">
@@ -38,7 +34,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .pill{position:absolute;top:44px;right:48px;z-index:20;background:rgba(170,255,0,0.08);border:2px solid rgba(170,255,0,0.3);padding:10px 24px;border-radius:6px;font-size:22px;letter-spacing:6px;color:#AAFF00;font-weight:600;text-transform:uppercase;font-family:'Inter',sans-serif}
 .sc{position:absolute;bottom:36px;right:44px;font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(170,255,0,0.18);letter-spacing:4px;z-index:20;line-height:1}
 
-/* SHARED LAYOUT — slide 9 as centering reference */
+/* SHARED LAYOUT */
 .inner{position:relative;z-index:5;flex:1;display:flex;flex-direction:column;padding:44px 56px;justify-content:center;overflow:hidden}
 .inner.top{justify-content:flex-start;padding-top:120px}
 .sec{font-size:24px;letter-spacing:8px;color:#AAFF00;text-transform:uppercase;margin-bottom:20px;font-weight:600;font-family:'Inter',sans-serif}
@@ -76,7 +72,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .mres{font-size:22px;letter-spacing:4px;font-weight:700;margin-left:16px;font-family:'Inter',sans-serif}
 .win{color:#AAFF00}.loss{color:#8B1414}.draw{color:#888}
 
-/* SLIDE 4: form strip — clean single row */
+/* SLIDE 4: form strip */
 .fstrip{display:flex;gap:12px;margin-top:28px;padding-top:24px;border-top:1px solid #1e1e1e;align-items:center}
 .fd{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;line-height:1}
 .fw{background:#AAFF00;color:#0a0a0a}
@@ -102,7 +98,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .flive{font-size:18px;letter-spacing:4px;background:#AAFF00;color:#0a0a0a;padding:8px 16px;border-radius:4px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif}
 .ffoot{font-size:28px;color:#fff;font-weight:300;margin-top:20px;padding-top:24px;border-top:1px solid #141414;line-height:1.5;font-family:'Inter',sans-serif}
 
-/* SLIDE 7 VERDICT — fixed hierarchy */
+/* SLIDE 7 VERDICT */
 .vh{font-family:'Bebas Neue',sans-serif;font-size:88px;line-height:0.9;color:#fff;letter-spacing:-1px}
 .vh-sub{font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1;color:#AAFF00;letter-spacing:0px;margin-top:8px}
 .vsub{font-size:22px;color:#fff;letter-spacing:6px;text-transform:uppercase;margin:18px 0 20px;font-weight:500;font-family:'Inter',sans-serif}
@@ -132,7 +128,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .lb-val.hi{color:#AAFF00}
 .lb-foot{font-size:26px;color:#fff;margin-top:24px;padding-top:20px;border-top:1px solid #1c1c1c;font-weight:300;line-height:1.45;font-family:'Inter',sans-serif}
 
-/* DECISIVE STAT — reference layout */
+/* DECISIVE STAT */
 .ds-ghost{position:absolute;font-family:'Bebas Neue',sans-serif;font-size:500px;line-height:1;color:#AAFF00;opacity:0.04;right:0;bottom:0;letter-spacing:-20px;pointer-events:none;padding:0 16px 16px 0}
 .ds-inner{position:relative;z-index:5;flex:1;display:flex;flex-direction:column;justify-content:center;padding:120px 56px 56px;overflow:hidden}
 .ds-label{font-size:22px;letter-spacing:8px;color:#AAFF00;text-transform:uppercase;margin-bottom:36px;font-weight:600;font-family:'Inter',sans-serif}
@@ -142,7 +138,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 .ds-body{font-size:34px;color:#fff;line-height:1.6;font-weight:300;font-family:'Inter',sans-serif}
 .ds-body em{color:#AAFF00;font-style:normal;font-weight:600}
 
-/* SIGN-OFF — so-line below watermark, not on it */
+/* SIGN-OFF */
 .so-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .so-ghost{position:absolute;font-family:'Bebas Neue',sans-serif;font-size:820px;color:#AAFF00;opacity:0.05;pointer-events:none;letter-spacing:-40px;line-height:0.85;top:44%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;user-select:none;z-index:1}
 .so-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%}
@@ -152,7 +148,6 @@ body{margin:0;padding:0;background:#0a0a0a}
 .so-rule{width:96px;height:3px;background:rgba(170,255,0,0.18);margin:24px auto}
 .so-tag{font-size:26px;letter-spacing:10px;color:rgba(170,255,0,0.42);text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
 .so-handle{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(170,255,0,0.32);letter-spacing:5px;margin-top:10px}
-/* FIX: white, 44px, margin-top 28px — sits below handle, clear of watermark */
 .so-line{font-size:44px;color:#ffffff;font-weight:300;font-style:italic;padding-top:56px;letter-spacing:0.5px;width:860px;text-align:center;line-height:1.45;font-family:'Inter',sans-serif}
 </style>
 </head>
@@ -182,7 +177,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="sc">01 / 10</div>
 </div>
 
-<!-- S2: CONTEXT — FIX: content centered across split, text sits in each half cleanly -->
+<!-- S2: CONTEXT — v4 FIX: absolute two-zone layout, title permanently in color region, body in dark region -->
 <div class="slide {{S2_ACTIVE}}" id="s2">
 <div style="position:absolute;top:0;left:0;right:0;height:50%;background:{{TEAM_COLOR}}"></div>
 <div style="position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(0,0,0,0.0) 0%,rgba(0,0,0,0.65) 100%)"></div>
@@ -190,14 +185,15 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:420px;color:#AAFF00;opacity:0.04;right:0;bottom:0;letter-spacing:-16px;pointer-events:none;padding:0 16px 16px 0;line-height:1">{{TEAM_CODE}}</div>
 <div class="bug">SPORT. DECODED.</div>
 <div class="pill">{{TEAM_FLAG}} {{TEAM_CODE}}</div>
-<!-- FIX: padding-top 12% pushes content down so title sits in red, body in dark -->
-<div class="inner" style="justify-content:flex-end;padding-top:0;padding-bottom:44px">
-  <div>
-    <div class="sec">{{PROBLEM_LABEL}}</div>
-    <div class="ttl" style="font-size:100px;margin-bottom:20px">{{PROBLEM_TITLE_L1}}<br>{{PROBLEM_TITLE_L2}}<br>{{PROBLEM_TITLE_L3}}</div>
-    <div class="bod" style="margin-top:16px;font-size:36px">{{PROBLEM_BODY}}</div>
-  </div>
-  <div class="trio">
+<!-- TOP ZONE: eyebrow + title anchored to bottom of color region -->
+<div style="position:absolute;top:0;left:0;right:0;height:50%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 28px 56px;z-index:5">
+  <div class="sec">{{PROBLEM_LABEL}}</div>
+  <div class="ttl" style="font-size:100px;margin-bottom:0;line-height:0.92">{{PROBLEM_TITLE_L1}}<br>{{PROBLEM_TITLE_L2}}<br>{{PROBLEM_TITLE_L3}}</div>
+</div>
+<!-- BOTTOM ZONE: body anchored to top of dark region, stats pushed to bottom -->
+<div style="position:absolute;bottom:0;left:0;right:0;height:50%;display:flex;flex-direction:column;justify-content:space-between;padding:28px 56px 44px 56px;z-index:5">
+  <div class="bod" style="font-size:36px;line-height:1.5">{{PROBLEM_BODY}}</div>
+  <div class="trio" style="margin-top:0;padding-top:24px">
     <div class="tb"><div class="tn">{{STAT1_NUM}}</div><div class="tl">{{STAT1_LABEL}}</div></div>
     <div class="tb"><div class="tn">{{STAT2_NUM}}</div><div class="tl">{{STAT2_LABEL}}</div></div>
     <div class="tb"><div class="tn">{{STAT3_NUM}}</div><div class="tl">{{STAT3_LABEL}}</div></div>
@@ -223,7 +219,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="sc">03 / 10</div>
 </div>
 
-<!-- S4: RESULTS — FIX: form strip text readable, single border lines only -->
+<!-- S4: RESULTS -->
 <div class="slide {{S4_ACTIVE}}" id="s4">
 <div style="position:absolute;right:0;top:0;bottom:0;width:46%;background:{{TEAM_COLOR}};opacity:0.25;z-index:1"></div>
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:380px;color:#AAFF00;opacity:0.04;right:0;bottom:0;letter-spacing:-16px;pointer-events:none;padding:0 16px 16px 0;line-height:1;z-index:2">{{FORM_GHOST}}</div>
@@ -234,7 +230,6 @@ body{margin:0;padding:0;background:#0a0a0a}
   <div class="mr"><div class="mt">{{MATCH1_HOME}}</div><div class="ms">{{MATCH1_SCORE_H}}</div><div class="msep">—</div><div class="ms w">{{MATCH1_SCORE_A}}</div><div class="mt r">{{MATCH1_AWAY}}</div><div class="mres {{MATCH1_COLOR}}">{{MATCH1_RESULT}}</div></div>
   <div class="mr"><div class="mt">{{MATCH2_HOME}}</div><div class="ms">{{MATCH2_SCORE_H}}</div><div class="msep">—</div><div class="ms w">{{MATCH2_SCORE_A}}</div><div class="mt r">{{MATCH2_AWAY}}</div><div class="mres {{MATCH2_COLOR}}">{{MATCH2_RESULT}}</div></div>
   <div class="mr last"><div class="mt">{{MATCH3_HOME}}</div><div class="ms w">{{MATCH3_SCORE_H}}</div><div class="msep">—</div><div class="ms">{{MATCH3_SCORE_A}}</div><div class="mt r">{{MATCH3_AWAY}}</div><div class="mres {{MATCH3_COLOR}}">{{MATCH3_RESULT}}</div></div>
-  <!-- FIX: clean form strip — dots sized correctly, text readable -->
   <div style="display:flex;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid #1e1e1e;align-items:center">
     <div style="width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;background:{{FORM_BG1}};color:#0a0a0a">{{FORM_L1}}</div>
     <div style="width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0;font-family:'Inter',sans-serif;background:{{FORM_BG2}};color:#0a0a0a">{{FORM_L2}}</div>
@@ -277,13 +272,12 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="sc">06 / 10</div>
 </div>
 
-<!-- S7: VERDICT — FIX: single dominant hero, sub-headline separate, stepped points -->
+<!-- S7: VERDICT -->
 <div class="slide {{S7_ACTIVE}}" id="s7">
 <div style="position:absolute;right:0;top:0;bottom:0;width:40%;background:linear-gradient(to left,{{TEAM_COLOR}} 0%,transparent 100%);opacity:0.18;z-index:1"></div>
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:720px;color:#AAFF00;opacity:0.04;right:-20px;bottom:-80px;letter-spacing:-20px;pointer-events:none;line-height:1;z-index:2">?</div>
 <div class="bug">SPORT. DECODED.</div>
 <div class="inner" style="justify-content:center">
-  <!-- FIX: vh is the team/story title, vh-sub is the question — clear hierarchy -->
   <div class="vh">{{VERDICT_L1}}<br>{{VERDICT_L2}}</div>
   <div class="vh-sub">{{VERDICT_L3}}</div>
   <div class="vsub">Third Rail verdict</div>
@@ -315,7 +309,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="sc">08 / 10</div>
 </div>
 
-<!-- S9: DECISIVE STAT — reference layout, do not modify -->
+<!-- S9: DECISIVE STAT -->
 <div class="slide {{S9_ACTIVE}}" id="s9">
 <div style="position:absolute;inset:0;background:#0a0a0a"></div>
 <div class="ds-ghost">{{DS_NUM}}</div>
@@ -330,7 +324,7 @@ body{margin:0;padding:0;background:#0a0a0a}
 <div class="sc">09 / 10</div>
 </div>
 
-<!-- S10: SIGN-OFF — FIX: so-line white, 44px, sits below handle with clear margin -->
+<!-- S10: SIGN-OFF -->
 <div class="slide {{S10_ACTIVE}}" id="s10">
 <div class="so-wrap">
   <div class="so-ghost">TRS</div>
